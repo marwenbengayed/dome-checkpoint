@@ -1,0 +1,256 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+/* main page setup background color and font */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #a5846e;
+  font-family: 'Roboto', sans-serif;
+}
+/* shopping cart setup background color and style */
+.shopping-cart {
+  width: 850px;
+  height: 600px;
+  margin: 80px auto;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+/* shopping cart item style */
+.title {
+ 
+  height: 15%;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #5E6977;
+  font-size: 18px;
+  font-weight: bold;
+}
+.item {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+}
+.sub-tatal {
+  padding: 20px 60px;
+  height: 20%;
+  display: flex;
+  align-self: flex-end;
+}
+/* shopping cart item elements style */
+.buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+.delete-btn,
+.like-btn {
+  display: inline-block;
+  Cursor: pointer;
+}
+.delete-btn {
+  width: 18px;
+  height: 17px;
+}
+.delete-btn i{
+  color: #de0d0d;
+}
+.like-btn {
+  position: absolute;
+  top: 9px;
+  left: 15px;
+  background: url(img/heart.png);
+  width: 60px;
+  height: 60px;
+  background-size: 2900%;
+  background-repeat: no-repeat;
+}
+/* is-active class to animate like buttons */
+.is-active {
+  animation-name: animate;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(28);
+  animation-fill-mode: forwards;
+}
+@keyframes animate {
+  0%   { background-position: left;  }
+  50%  { background-position: right; }
+  100% { background-position: right; }
+}
+/* product image, name and description style */
+.image {
+  margin-right: 50px;
+}
+.description {
+  padding-top: 10px;
+  margin-right: 60px;
+  width: 115px;
+}
+.description .price {
+  background-color: #212529;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 6px;
+}
+.description span {
+  display: block;
+  font-size: 14px;
+  color: #43484D;
+  font-weight: 400;
+}
+.description span:first-child {
+  margin-bottom: 5px;
+}
+.description span:last-child {
+  display: inline;
+  font-weight: bold;
+  margin-top: 8px;
+  color: #ffffff;
+}
+/* quantity of each item - ad + butoons style */
+.quantity {
+  padding-top: 20px;
+  margin-right: 60px;
+}
+.quantity input {
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+button[class*=btn] {
+  width: 30px;
+  height: 30px;
+  background-color: #E1E8EE;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.minus-btn img {
+  margin-bottom: 3px;
+}
+.plus-btn img {
+  margin-top: 2px;
+}
+button:focus,
+input:focus {
+  outline:0;
+}
+.total-price {
+  width: 83px;
+  padding-top: 27px;
+  text-align: center;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+/*-- like button --*/
+/*
+title: Periscope Likes Tutorial
+date: Aug 4, 2013
+author: Zan Ilic
+available at: http://zanilic.com/periscope-likes-tutorial-jquery-css3
+*/
+button.likes {
+    padding: 0;
+  }
+  
+  .heart-particle-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    left: 35%;
+  }
+  
+  #heart-icon {
+    margin-top: 50px;
+    color: #f55567;
+    font-size: 16px;
+    border: 1px;
+    opacity: 1;
+    background: none;
+    transition: .3s ease-in-out;
+  }
+  
+  #heart-icon:hover {
+    border: 1px;
+    background: none;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+  }
+  
+  #heart-icon:focus {
+    outline: 0;
+    border: 1px;
+  }
+  
+  #heart-counter {
+    font-weight: 0;
+    font-size: 0.8em;
+    opacity: 1;
+    font-size: 13px;
+    color: #f55567;
+  }
+  
+  .heart-particle {
+    padding: 26px;
+    opacity: 1;
+    position: absolute;
+    display: none;
+  }
+  
+  .heart-particle i {
+    position: absolute;
+    margin-left: 52px;
+    opacity: .4;
+    font-size: 16px;
+  }
+  
+  .heart-particle-col {
+    color: #f55567;
+  }
+  
+  /* Animations */
+  
+  @keyframes flows {
+    0% {
+      opacity: 0;
+      bottom: 0%;
+      left: 10%;
+    }
+    40% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+      left: -10%;
+    }
+    60% {
+      opacity: 0.3;
+    }
+    80% {
+      bottom: 60%;
+    }
+    100% {
+      opacity: 0;
+      bottom: 80%;
+      left: 0%;
+    }
+  }
+
+
+
+
