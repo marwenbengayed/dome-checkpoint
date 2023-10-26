@@ -46,6 +46,12 @@ html, body {
   height: 20%;
   display: flex;
   align-self: flex-end;
+  left: -50%;
+
+}
+.sub-tatal {
+right: 60%;
+left: auto;
 }
 /* shopping cart item elements style */
 .buttons {
@@ -93,7 +99,7 @@ html, body {
   margin-right: 50px;
 }
 .description {
-  padding-top: 10px;
+  padding-top: 10px ;
   margin-right: 60px;
   width: 115px;
 }
@@ -108,6 +114,7 @@ html, body {
   font-size: 14px;
   color: #43484D;
   font-weight: 400;
+  
 }
 .description span:first-child {
   margin-bottom: 5px;
@@ -117,6 +124,7 @@ html, body {
   font-weight: bold;
   margin-top: 8px;
   color: #ffffff;
+  left: 100%;
 }
 /* quantity of each item - ad + butoons style */
 .quantity {
@@ -149,6 +157,10 @@ button:focus,
 input:focus {
   outline:0;
 }
+.title {
+ left: ;: 80%
+  top: 50%;
+}
 .total-price {
   width: 83px;
   padding-top: 27px;
@@ -166,13 +178,15 @@ available at: http://zanilic.com/periscope-likes-tutorial-jquery-css3
 */
 button.likes {
     padding: 0;
+    width: 50%;
   }
   
   .heart-particle-box {
     position: relative;
     width: 200px;
     height: 200px;
-    left: 35%;
+    left: 5%;
+    top: -10%;
   }
   
   #heart-icon {
@@ -191,6 +205,7 @@ button.likes {
     cursor: pointer;
     transition: .5s ease-in-out;
   }
+
   
   #heart-icon:focus {
     outline: 0;
